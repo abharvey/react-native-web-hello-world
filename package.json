@@ -21,9 +21,11 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-native": "^0.42.0",
+    "react-primatives": "^0.0.5",
     "react-redux": "^3.1.2",
     "redux": "^3.1.1",
     "redux-thunk": "^1.0.3",
+    "styled-components": "^3.1.6",
     "superagent": "^1.7.2"
   },
   "devDependencies": {
