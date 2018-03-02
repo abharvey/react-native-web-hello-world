@@ -7,13 +7,8 @@ import styled from "styled-components/primitives";
 import Header from "../components/Header";
 import HelloWorld from "../components/HelloWorld";
 // actions
-import { toggleColor } from "../actions/actions";
 
-const Container = styled.View`
-  width: 100%;
-  text-align: center;
-  user-select: none;
-`;
+const Container = styled.View``;
 
 /** The app entry point */
 class ReactNativeWebHelloWorld extends Component {
@@ -24,7 +19,7 @@ class ReactNativeWebHelloWorld extends Component {
     return (
       <Container>
         <Header />
-        <HelloWorld onClick={() => dispatch(toggleColor())} color={color} />
+        <HelloWorld color={color} handleTouch={() => dispatch(toggleColor())} />
       </Container>
     );
   }
