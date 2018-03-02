@@ -3,8 +3,6 @@ import { render } from "react-dom";
 import Root from "../containers/Root";
 import configureStore from "../store/configureStore";
 
-// load our css
-
 const store = configureStore();
 const rootElement = document.getElementById("root");
 

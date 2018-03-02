@@ -1,10 +1,19 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import { func, string, object } from "prop-types";
 import { connect } from "react-redux";
+import styled from "styled-components/primitives";
+
 // dumb components
 import Header from "../components/Header";
 import HelloWorld from "../components/HelloWorld";
 // actions
 import { toggleColor } from "../actions/actions";
+
+const Container = styled.View`
+  width: 100%;
+  text-align: center;
+  user-select: none;
+`;
 
 /** The app entry point */
 class ReactNativeWebHelloWorld extends Component {
@@ -13,18 +22,18 @@ class ReactNativeWebHelloWorld extends Component {
     const { dispatch, color, data } = this.props;
 
     return (
-      <div className="react-native-web">
+      <Container>
         <Header />
         <HelloWorld onClick={() => dispatch(toggleColor())} color={color} />
-      </div>
+      </Container>
     );
   }
 }
 
 ReactNativeWebHelloWorld.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired
+  dispatch: func.isRequired,
+  color: string.isRequired,
+  data: object.isRequired
 };
 
 const select = state => state;
