@@ -11,9 +11,10 @@ const Hello = styled.Text`
 export default class HelloWorld extends Component {
   render() {
     const { onClick, color, handleTouch } = this.props;
+    //onPress={() => handleTouch()}
     return (
       <Container>
-        <Touchable onPress={() => handleTouch()}>
+        <Touchable>
           <Hello color={color}>Hello World</Hello>
         </Touchable>
       </Container>
